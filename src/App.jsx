@@ -20,7 +20,7 @@ const projects = [
     title: 'Monitoring App',
     description: '',
     tech: ['PHP', 'JavaScript', 'BOOTSTRAP', 'MYSQL'],
-    url: '#project-alpha',
+    url: 'https://103.133.36.131/s/monitoring-praktikum/',
     gradient: 'from-blue-400 to-cyan-400'
   },
 ];
