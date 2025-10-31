@@ -20,7 +20,16 @@ const projects = [
     title: 'Monitoring App',
     description: '',
     tech: ['PHP', 'JavaScript', 'BOOTSTRAP', 'MYSQL'],
-    url: 'https://103.133.36.131/s/monitoring-praktikum/',
+    url: 'https://103.133.36.131/s/monitoring-praktikum',
+    gradient: 'from-blue-400 to-cyan-400'
+  },
+  {
+    id: 2,
+    image: '/projects/sipemla.png',
+    title: 'SIPEMLA APP',
+    description: '',
+    tech: ['PHP', 'JavaScript', 'BOOTSTRAP', 'MYSQL'],
+    url: 'https://103.133.36.131/s/SIPEMLA',
     gradient: 'from-blue-400 to-cyan-400'
   },
 ];
