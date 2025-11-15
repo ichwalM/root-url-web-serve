@@ -47,7 +47,7 @@ const portfolioCollections = [
 ];
 
 export default function App() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -66,6 +66,31 @@ export default function App() {
         
         {/* Header */}
         <HeroHeader setIsDark={setIsDark} isDark={isDark} />
+
+        
+        {/* Individual Projects Section */}
+        <section className="max-w-7xl mx-auto px-6 py-16 border-t border-gray-200 dark:border-gray-700">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <Code className="w-8 h-8 text-sky-500" />
+              <h3 className="text-4xl font-bold text-gray-800 dark:text-white animate-fade-in">
+                IC-LAB-APP
+              </h3>
+            </div>
+            {/* <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-4">
+              Check out our latest and most exciting individual projects
+            </p> */}
+            <div className="w-24 h-1 bg-gradient-to-r from-sky-500 to-blue-600 mx-auto rounded-full animate-fade-in" style={{ animationDelay: '100ms' }}></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <div key={project.id} className="animate-fade-in">
+                <ProjectCard project={project} index={index} />
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* Portfolio Collections Section */}
         <section className="max-w-7xl mx-auto px-6 py-16 border-t border-gray-200 dark:border-gray-700">
@@ -86,30 +111,6 @@ export default function App() {
             {portfolioCollections.map((portfolio, index) => (
               <div key={portfolio.id} className="animate-fade-in">
                 <PortfolioCard portfolio={portfolio} index={index} />
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Individual Projects Section */}
-        <section className="max-w-7xl mx-auto px-6 py-16 border-t border-gray-200 dark:border-gray-700">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 mb-4">
-              <Code className="w-8 h-8 text-sky-500" />
-              <h3 className="text-4xl font-bold text-gray-800 dark:text-white animate-fade-in">
-                IC-LAB-APP
-              </h3>
-            </div>
-            {/* <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-4">
-              Check out our latest and most exciting individual projects
-            </p> */}
-            <div className="w-24 h-1 bg-gradient-to-r from-sky-500 to-blue-600 mx-auto rounded-full animate-fade-in" style={{ animationDelay: '100ms' }}></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <div key={project.id} className="animate-fade-in">
-                <ProjectCard project={project} index={index} />
               </div>
             ))}
           </div>
